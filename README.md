@@ -163,21 +163,39 @@ The system generates:
 
 ### 🔄 Complete n8n Workflow
 
+The complete automation workflow showing the flow from customer registration to AI processing, API integrations, itinerary generation, and final communication.
+
 ![Complete n8n Workflow](n8n-workflow.png)
+
+---
 
 ### 📅 Google Calendar
 
+Automatically creates a Google Calendar event containing the customer's planned travel details.
+
 ![Google Calendar](google-calendar.png)
+
+---
 
 ### 🗓️ Google Calendar Itinerary
 
+Displays the scheduled travel itinerary and important trip activities directly in Google Calendar.
+
 ![Google Calendar Itinerary](google-calendar-it.png)
+
+---
 
 ### 🧳 Personalized Itinerary
 
+Shows the AI-generated personalized travel plan based on the customer's destination, budget, duration, interests, and preferences.
+
 ![Personalized Itinerary](personalized-itinerary.png)
 
+---
+
 ### 📧 Gmail Output
+
+The final personalized travel plan is automatically delivered to the customer through Gmail, including itinerary details, weather information, travel tips, and recommendations.
 
 ![Gmail Output](confirmation-email.png)
 
@@ -264,7 +282,7 @@ The system transforms a simple customer travel request into a complete personali
 
 # 👨‍💻 Author
 
-## Palak Singh
+## Palak
 
 **Project:** Smart Tourism Travel Planning Automation
 
