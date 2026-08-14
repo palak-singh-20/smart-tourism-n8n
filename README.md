@@ -183,23 +183,6 @@ The system generates:
 
 ---
 
-## 🎥 Project Demo
-
-### Smart Tourism Automation Demo
-
-[▶️ Watch the Demo Video](YOUR_VIDEO_LINK_HERE)
-
-The demo covers:
-
-1. Customer registration
-2. AI destination recommendation
-3. API integrations
-4. Personalized itinerary generation
-5. Google Calendar automation
-6. Google Sheets storage
-7. Gmail notification
-8. Premium recommendations
-
 ---
 
 ## 📁 Repository Structure
@@ -210,14 +193,13 @@ smart-tourism-n8n/
 ├── workflows/
 │   └── Smart-Tourism-Travel-Registration-PUBLIC.json
 │
-├── screenshots/
-│   ├── n8n-workflow.png
-│   ├── google-sheets.png
-│   ├── google-calendar.png
-│   ├── personalized-itinerary.png
-│   └── confirmation-email.png
-│
 ├── docs/
 │   └── project-report.pdf
 │
-└── README.md
+├── README.md
+│
+├── n8n-workflow.png
+├── google-calendar.png
+├── google-calendar-it.png
+├── personalized-itinerary.png
+└── confirmation-email.png
