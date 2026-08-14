@@ -161,6 +161,12 @@ The system generates:
 
 ## 📸 Screenshots
 
+### 📝 Travel Registration Form
+
+The registration form collects essential customer travel preferences, including personal details, travel date, number of travelers, budget, trip duration, interests, accommodation, and transportation preferences. This information is used by the automation workflow to generate a personalized travel plan.
+
+![Travel Registration Form](form.png)
+
 ### 🔄 Complete n8n Workflow
 
 The complete automation workflow showing the flow from customer registration to AI processing, API integrations, itinerary generation, and final communication.
