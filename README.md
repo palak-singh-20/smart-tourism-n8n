@@ -206,45 +206,6 @@ This project demonstrates practical implementation of:
 
 ---
 
-## 📁 Repository Structure
-
-```text
-smart-tourism-n8n/
-│
-├── workflows/
-│   └── Smart-Tourism-Travel-Registration-PUBLIC.json
-│
-├── docs/
-│   └── project-report.pdf
-│
-├── README.md
-│
-├── n8n-workflow.png
-├── google-calendar.png
-├── google-calendar-it.png
-├── personalized-itinerary.png
-└── confirmation-email.png
-
-# 🎓 Capstone Highlights
-
-This project demonstrates practical implementation of:
-
-- 🤖 **AI-powered decision making**
-- 🔄 **Workflow automation**
-- 🔗 **REST API integration**
-- 🌍 **Location-based services**
-- 🌦️ **Weather-aware travel planning**
-- 🔀 **Conditional workflow branching**
-- 💻 **JavaScript data processing**
-- 📊 **Automated data storage**
-- 📅 **Calendar automation**
-- 📧 **Automated communication**
-- 🧠 **AI-generated content**
-- 🔐 **Credential security**
-- 🚀 **End-to-end business process automation**
-
----
-
 # 🌍 Real-World Applications
 
 The system can be adapted for:
