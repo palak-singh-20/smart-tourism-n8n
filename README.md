@@ -165,9 +165,9 @@ The system generates:
 
 ![n8n Workflow](n8n-workflow.png)
 
-### Google Sheets Output
+### Google Calender Itinerary
 
-![Google Sheets](google-sheets.png)
+![Google calender](google-calender-it.png)
 
 ### Google Calendar
 
