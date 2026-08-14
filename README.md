@@ -203,3 +203,120 @@ smart-tourism-n8n/
 ├── google-calendar-it.png
 ├── personalized-itinerary.png
 └── confirmation-email.png
+
+# 🎓 Capstone Highlights
+
+This project demonstrates practical implementation of:
+
+- 🤖 **AI-powered decision making**
+- 🔄 **Workflow automation**
+- 🔗 **REST API integration**
+- 🌍 **Location-based services**
+- 🌦️ **Weather-aware travel planning**
+- 🔀 **Conditional workflow branching**
+- 💻 **JavaScript data processing**
+- 📊 **Automated data storage**
+- 📅 **Calendar automation**
+- 📧 **Automated communication**
+- 🧠 **AI-generated content**
+- 🔐 **Credential security**
+- 🚀 **End-to-end business process automation**
+
+---
+
+# 🌍 Real-World Applications
+
+The system can be adapted for:
+
+- ✈️ Travel agencies
+- 🌐 Tourism companies
+- 💼 Corporate travel management
+- 🧳 Personalized travel platforms
+- 🏨 Hotel and resort services
+- 📍 Destination recommendation platforms
+- 👨‍💼 Travel consultants
+- 🤖 AI travel assistants
+
+---
+
+# ⚠️ Limitations
+
+- AI recommendations may require human verification.
+- Weather information depends on external API availability.
+- Estimated costs may differ from actual travel prices.
+- External API failures may affect workflow execution.
+- Real-time hotel and flight booking is not currently included.
+- The system currently focuses on travel planning rather than direct booking.
+
+---
+
+# 🔮 Future Scope
+
+Future versions can include:
+
+- ✈️ Flight booking integration
+- 🏨 Hotel booking integration
+- 🚆 Train booking integration
+- 💬 WhatsApp travel notifications
+- 🤖 AI travel chatbot
+- 💳 Online payment integration
+- 💰 Real-time travel pricing
+- 🗺️ Interactive travel maps
+- 📍 Live location tracking
+- ⭐ Customer feedback automation
+- 🌍 Multi-destination trip planning
+- 📈 Travel analytics dashboard
+- ⏰ Automated travel reminders
+- 👤 Human approval workflow
+- 🔁 Advanced error handling and retry mechanisms
+
+---
+
+# 🏆 Capstone Project
+
+This project was developed as an **AI-powered workflow automation capstone project**, demonstrating how modern AI services, APIs, and automation platforms can be combined to solve a real-world business problem.
+
+The system transforms a simple customer travel request into a complete personalized travel experience with minimal manual intervention.
+
+---
+
+# 👨‍💻 Author
+
+## Palak Singh
+
+**Project:** Smart Tourism Travel Planning Automation
+
+**GitHub:** [Palak](https://github.com/palak-singh-20)
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Commit your changes.
+5. Push the branch.
+6. Open a Pull Request.
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+# 🌍 Smart Tourism Travel Planning Automation
+
+### 🤖 Plan Smarter • Travel Better • Automate Everything
+
+Built with ❤️ using **n8n, Groq AI, Google APIs, JavaScript, and Automation**
+
+⭐ If you found this project useful, consider giving the repository a Star!
+
+</div>
