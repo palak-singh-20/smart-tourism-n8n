@@ -29,6 +29,36 @@ The complete workflow is:
 **Customer Registration → Data Processing → AI Recommendation → Geocoding → Weather API → Personalized Itinerary → Google Calendar → Premium Recommendations → Google Sheets → Gmail**
 
 ---
+---
+
+## 🔄 System Data Flow
+
+```text
+Customer
+   ↓
+Travel Registration Form
+   ↓
+Customer Data Processing
+   ↓
+Google Sheets
+   ↓
+Groq AI
+   ↓
+Destination Recommendation
+   ↓
+Geocoding API
+   ↓
+Weather API
+   ↓
+Personalized Itinerary
+   ↓
+Premium Recommendations
+   ↓
+Google Calendar
+   ↓
+Final Travel Record
+   ↓
+Gmail
 
 ## 🚀 Key Features
 
@@ -155,7 +185,20 @@ The system generates:
 ![n8n Workflow](n8n-workflow.png)
 
 ### Google Calendar
+# 📅 Google Calendar Automation
 
+The workflow automatically creates a **Google Calendar event** for the planned trip.
+
+The event can contain:
+
+- 👤 **Customer Name**
+- 🌍 **Destination**
+- 📅 **Travel Date**
+- ⏱️ **Trip Duration**
+- ✈️ **Travel Details**
+- 🗓️ **Personalized Itinerary**
+
+This integration helps keep the customer's travel schedule organized and eliminates the need for manual calendar entry.
 ![Google Calendar](google-calendar.png)
 
 ### Google Calendar
@@ -167,6 +210,20 @@ The system generates:
 ![Personalized Itinerary](personalized-itinerary.png)
 
 ### Gmail Output
+# 📧 Gmail Automation
+
+The workflow automatically sends a **personalized travel email** to the customer containing:
+
+- 🌍 **Destination**
+- 📅 **Travel Dates**
+- 👥 **Number of Travelers**
+- 💰 **Travel Budget**
+- 🗓️ **Personalized Itinerary**
+- 🌦️ **Weather Information**
+- 💡 **Travel Tips**
+- 💎 **Premium Recommendations**
+
+This automation ensures that the customer receives all important travel information in a single, personalized email without requiring manual communication.
 
 ![Gmail Output](confirmation-email.png)
 
