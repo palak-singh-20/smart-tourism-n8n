@@ -62,21 +62,74 @@ Gmail
 
 ## 🚀 Key Features
 
-- 📝 Automated travel registration
-- 🤖 AI-powered destination recommendation using Groq
-- 🧠 Personalized itinerary generation
-- 🌍 Destination geocoding
-- 🌦️ Weather API integration
-- 📊 Google Sheets data storage
-- 📅 Google Calendar event creation
-- 📧 Automated Gmail notification
-- 💎 Premium travel recommendations
-- 🔀 Conditional branching using IF nodes
-- 💻 JavaScript data processing
+- 📝 **Automated Travel Registration**  
+  Collects customer travel details through an automated registration form.
 
----
+- 🤖 **AI-Powered Destination Recommendation**  
+  Uses Groq AI to recommend suitable destinations based on budget, duration, interests, and travel preferences.
+
+- 🧠 **Personalized Itinerary Generation**  
+  Generates customized day-wise travel plans based on customer requirements.
+
+- 🌍 **Destination Geocoding**  
+  Retrieves geographical information such as latitude, longitude, and location details.
+
+- 🌦️ **Weather Integration**  
+  Retrieves destination weather information to improve travel planning.
+
+- 💎 **Premium Travel Recommendations**  
+  Provides recommendations for premium hotels, restaurants, transportation, and experiences.
+
+- 📊 **Google Sheets Automation**  
+  Automatically stores customer information and generated travel records.
+
+- 📅 **Google Calendar Automation**  
+  Creates a travel event containing the customer's trip details and itinerary.
+
+- 📧 **Automated Gmail Communication**  
+  Sends a personalized travel plan directly to the customer.
+
+- 🔀 **Conditional Workflow Branching**  
+  Uses IF nodes to control workflow decisions and processing paths.
+
+- 💻 **JavaScript Data Processing**  
+  Processes, transforms, and formats data between different workflow stages.
+
+- 🔗 **Multi-API Integration**  
+  Connects AI, weather, geocoding, Google Workspace, and automation services into one workflow.
 
 ## 🏗️ Workflow Architecture
+
+The Smart Tourism system is implemented as an end-to-end **n8n automation workflow** that connects customer input, AI processing, external APIs, data storage, scheduling, and communication.
+
+### 🔄 Overall Workflow
+
+```text
+Customer
+   ↓
+Travel Registration Form
+   ↓
+Data Processing
+   ↓
+Google Sheets
+   ↓
+Groq AI
+   ↓
+Destination Recommendation
+   ↓
+Geocoding API
+   ↓
+Weather API
+   ↓
+Personalized Itinerary
+   ↓
+Premium Recommendations
+   ↓
+Google Calendar
+   ↓
+Final Travel Record
+   ↓
+Gmail
 
 ### 1. Customer Registration
 
