@@ -189,7 +189,7 @@ Displays the scheduled travel itinerary and important trip activities directly i
 
 Shows the AI-generated personalized travel plan based on the customer's destination, budget, duration, interests, and preferences.
 
-![Personalized Itinerary](personalized-itinerary.png)
+![Personalized Itinerary](personalized-itinerary1.png)
 
 ---
 
