@@ -109,15 +109,15 @@ The workflow automatically:
 
 | Technology | Purpose |
 |---|---|
-| **n8n** | Workflow automation |
-| **Groq / Llama 3.3 70B** | AI recommendations and itinerary |
-| **Google Sheets** | Customer and travel data storage |
-| **Google Calendar** | Trip scheduling |
-| **Gmail** | Automated communication |
-| **Geocoding API** | Destination location data |
-| **Weather API** | Weather information |
-| **JavaScript** | Data transformation |
-| **GitHub** | Version control and documentation |
+| **n8n** | Workflow automation and orchestration |
+| **Groq / Llama 3.3 70B** | AI-powered destination recommendations and itinerary generation |
+| **Google Sheets** | Customer data and final travel record storage |
+| **Google Calendar** | Automatic trip/event scheduling |
+| **Gmail** | Personalized email delivery |
+| **Geocoding API** | Converts destinations into location coordinates |
+| **Weather API** | Retrieves destination weather information |
+| **JavaScript** | Data transformation and processing |
+| **GitHub** | Project version control and documentation |
 
 ---
 
