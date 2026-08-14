@@ -1,253 +1,213 @@
-# 🌍 Smart Tourism Travel Planning & Recommendation Automation
+# 🌍 Smart Tourism Travel Planning Automation
 
-An AI-powered travel planning and recommendation automation system built using **n8n, Groq, Google Sheets, Google Calendar, Gmail, Geocoding API, Weather API, and JavaScript**.
+An AI-powered travel planning automation system built using **n8n, Groq, Google Sheets, Google Calendar, Gmail, Geocoding API, Weather API, and JavaScript**.
 
-The system collects a customer's travel requirements through an automated registration form, processes the submitted information, uses AI to recommend a suitable destination, retrieves location and weather information, generates a personalized travel itinerary, creates a Google Calendar event, stores the final travel record in Google Sheets, and sends personalized travel recommendations through Gmail.
-
----
-
-# 📌 Table of Contents
-
-- [Project Overview](#-project-overview)
-- [Problem Statement](#-problem-statement)
-- [Business Context](#-business-context)
-- [Project Objectives](#-project-objectives)
-- [Stakeholders](#-stakeholders)
-- [Pain Points](#-pain-points)
-- [Solution](#-solution)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Workflow Architecture](#-workflow-architecture)
-- [Detailed Workflow](#-detailed-workflow)
-- [AI-Powered Decision Making](#-ai-powered-decision-making)
-- [API Integrations](#-api-integrations)
-- [Data Flow](#-data-flow)
-- [Workflow Nodes](#-workflow-nodes)
-- [Conditional Logic](#-conditional-logic)
-- [Google Sheets Integration](#-google-sheets-integration)
-- [Google Calendar Integration](#-google-calendar-integration)
-- [Gmail Integration](#-gmail-integration)
-- [Output](#-output)
-- [Technology Stack](#-technology-stack)
-- [Repository Structure](#-repository-structure)
-- [Installation and Setup](#-installation-and-setup)
-- [Credential Configuration](#-credential-configuration)
-- [Importing the Workflow](#-importing-the-workflow)
-- [Configuration Requirements](#-configuration-requirements)
-- [Security](#-security)
-- [Testing](#-testing)
-- [Example Workflow Execution](#-example-workflow-execution)
-- [Advantages](#-advantages)
-- [Limitations](#-limitations)
-- [Future Enhancements](#-future-enhancements)
-- [Capstone Requirements Mapping](#-capstone-requirements-mapping)
-- [Demo](#-demo)
-- [Screenshots](#-screenshots)
-- [Conclusion](#-conclusion)
-- [Author](#-author)
+The system collects customer travel preferences, recommends a suitable destination using AI, retrieves location and weather information, generates a personalized itinerary, creates a calendar event, stores the final record, and sends the travel plan through email.
 
 ---
 
-# 🌟 Project Overview
+## 🎯 Problem Statement
 
-Travel planning often requires customers to provide their requirements, compare destinations, check weather conditions, create itineraries, arrange schedules, and communicate with travel planners.
+Traditional travel planning involves several manual tasks:
 
-These activities can involve multiple tools and significant manual effort.
+- Collecting customer requirements
+- Selecting suitable destinations
+- Checking weather conditions
+- Creating itineraries
+- Maintaining customer records
+- Scheduling trips
+- Sending personalized travel plans
 
-The **Smart Tourism Travel Planning Automation** solves this problem by connecting AI, APIs, databases, calendars, and email communication into a single automated workflow.
+This project automates these activities using an AI-powered n8n workflow.
 
-A customer provides information such as:
+---
+
+## 💡 Solution
+
+The complete workflow is:
+
+**Customer Registration → Data Processing → AI Recommendation → Geocoding → Weather API → Personalized Itinerary → Google Calendar → Premium Recommendations → Google Sheets → Gmail**
+
+---
+
+## 🚀 Key Features
+
+- 📝 Automated travel registration
+- 🤖 AI-powered destination recommendation using Groq
+- 🧠 Personalized itinerary generation
+- 🌍 Destination geocoding
+- 🌦️ Weather API integration
+- 📊 Google Sheets data storage
+- 📅 Google Calendar event creation
+- 📧 Automated Gmail notification
+- 💎 Premium travel recommendations
+- 🔀 Conditional branching using IF nodes
+- 💻 JavaScript data processing
+
+---
+
+## 🏗️ Workflow Architecture
+
+### 1. Customer Registration
+
+The customer provides:
 
 - Full Name
 - Email
 - Phone Number
 - Travel Date
 - Number of Travelers
-- Estimated Budget
+- Budget
 - Trip Duration
 - Travel Interests
 - Accommodation Preference
 - Transportation Preference
 
-The automation then processes this information and generates a personalized travel experience.
+### 2. AI Destination Recommendation
 
----
-
-# ❗ Problem Statement
-
-Traditional travel planning involves several repetitive activities:
-
-1. Collecting customer information.
-2. Understanding travel preferences.
-3. Selecting an appropriate destination.
-4. Researching destination information.
-5. Checking weather conditions.
-6. Preparing a day-wise itinerary.
-7. Recording customer information.
-8. Scheduling travel-related events.
-9. Sending personalized communication.
-
-Performing these tasks manually can be:
-
-- Time-consuming
-- Repetitive
-- Error-prone
-- Difficult to scale
-- Difficult to personalize for every customer
-
-The goal of this project is to automate these activities using an AI-powered workflow.
-
----
-
-# 🏢 Business Context
-
-The system can be used by:
-
-- Travel agencies
-- Tourism companies
-- Travel consultants
-- Online travel platforms
-- Hospitality businesses
-- Corporate travel planners
-- Personal travel assistants
-
-A travel business can use this automation to process customer requests automatically instead of manually preparing every travel plan.
-
-The workflow can handle customer data, make AI-based recommendations, enrich the data using external APIs, schedule travel events, and communicate the final result.
-
----
-
-# 🎯 Project Objectives
-
-The main objectives are:
-
-### 1. Automate Travel Registration
-
-Collect customer travel requirements through an automated form.
-
-### 2. Automate Destination Recommendation
-
-Use Groq-powered AI to analyze:
+Groq analyzes the customer's:
 
 - Budget
 - Trip duration
 - Number of travelers
-- Travel interests
-- Accommodation preferences
-- Transportation preferences
+- Interests
+- Accommodation preference
+- Transportation preference
 
-and recommend a suitable destination.
+and recommends a suitable destination.
 
-### 3. Enrich Destination Information
+### 3. Destination & Weather Enrichment
 
-Use external APIs to retrieve:
+The recommended destination is processed using:
 
-- Geographic information
-- Latitude and longitude
-- Weather information
+- **Geocoding API** — retrieves location information
+- **Weather API** — retrieves weather information
 
-### 4. Generate Personalized Itineraries
+### 4. Personalized Itinerary
 
-Generate a day-wise travel plan based on the customer's requirements.
+Groq generates a personalized day-wise travel plan containing:
 
-### 5. Automate Scheduling
+- Activities
+- Food recommendations
+- Estimated costs
+- Travel tips
+- Weather precautions
+- Packing suggestions
 
-Create a Google Calendar event for the trip.
+### 5. Final Automation
 
-### 6. Automate Communication
+The workflow automatically:
 
-Send the customer a personalized email containing their travel plan.
-
-### 7. Maintain Records
-
-Store customer and travel information in Google Sheets.
-
-### 8. Generate Premium Recommendations
-
-Provide optional premium travel recommendations such as:
-
-- Luxury accommodation
-- Private transportation
-- Premium dining
-- Exclusive experiences
+- Creates a Google Calendar event
+- Stores the final travel record in Google Sheets
+- Generates premium recommendations
+- Sends a personalized Gmail
 
 ---
 
-# 👥 Stakeholders
+## 🛠️ Technology Stack
 
-## Primary Stakeholders
-
-### Customers
-
-Customers provide their travel preferences and receive a personalized travel plan.
-
-### Travel Agencies
-
-Travel agencies can use the system to automate customer processing and travel planning.
-
-### Travel Consultants
-
-Consultants can use AI-generated recommendations as a starting point for customer planning.
-
-## Secondary Stakeholders
-
-- Tourism businesses
-- Hotels
-- Transportation providers
-- Hospitality companies
-- System administrators
-
----
-
-# 😓 Pain Points
-
-The system addresses the following problems:
-
-| Problem | Automated Solution |
+| Technology | Purpose |
 |---|---|
-| Manual customer registration | n8n form |
-| Manual destination research | Groq AI |
-| Manual weather checking | Weather API |
-| Manual location lookup | Geocoding API |
-| Manual itinerary creation | AI-generated itinerary |
-| Manual record keeping | Google Sheets |
-| Manual scheduling | Google Calendar |
-| Manual email communication | Gmail |
-| Repetitive premium recommendations | AI-generated recommendations |
+| **n8n** | Workflow automation |
+| **Groq / Llama 3.3 70B** | AI recommendations and itinerary |
+| **Google Sheets** | Customer and travel data storage |
+| **Google Calendar** | Trip scheduling |
+| **Gmail** | Automated communication |
+| **Geocoding API** | Destination location data |
+| **Weather API** | Weather information |
+| **JavaScript** | Data transformation |
+| **GitHub** | Version control and documentation |
 
 ---
 
-# 💡 Solution
+## 📊 Example
 
-The proposed solution is an **AI-powered workflow automation system**.
+### Customer Input
 
-The system follows this basic pipeline:
+- Travelers: 3
+- Budget: ₹40,000
+- Duration: 10 days
+- Interests: Beaches, Cafe, Sunset
+- Accommodation: 5 Star
+- Transportation: Train
+
+### Generated Output
+
+**Destination:** Goa, India
+
+The system generates:
+
+- Personalized itinerary
+- Weather information
+- Estimated trip cost
+- Travel tips
+- Premium recommendations
+- Google Calendar event
+- Google Sheets record
+- Personalized Gmail
+
+---
+
+## 📸 Screenshots
+
+### Complete n8n Workflow
+
+![n8n Workflow](screenshots/n8n-workflow.png)
+
+### Google Sheets Output
+
+![Google Sheets](screenshots/google-sheets.png)
+
+### Google Calendar
+
+![Google Calendar](screenshots/google-calendar.png)
+
+### Personalized Itinerary
+
+![Personalized Itinerary](screenshots/personalized-itinerary.png)
+
+### Gmail Output
+
+![Gmail Output](screenshots/confirmation-email.png)
+
+---
+
+## 🎥 Project Demo
+
+### Smart Tourism Automation Demo
+
+[▶️ Watch the Demo Video](YOUR_VIDEO_LINK_HERE)
+
+The demo covers:
+
+1. Customer registration
+2. AI destination recommendation
+3. Geocoding and weather APIs
+4. Personalized itinerary generation
+5. Google Calendar automation
+6. Google Sheets storage
+7. Gmail notification
+8. Premium recommendations
+
+---
+
+## 📁 Repository Structure
 
 ```text
-Customer
-   ↓
-Travel Registration Form
-   ↓
-Customer Data Processing
-   ↓
-Google Sheets
-   ↓
-AI Destination Recommendation
-   ↓
-Destination Data Processing
-   ↓
-Geocoding API
-   ↓
-Weather API
-   ↓
-AI Personalized Itinerary
-   ↓
-Google Calendar
-   ↓
-Premium Recommendation
-   ↓
-Final Travel Record
-   ↓
-Google Sheets
-   ↓
-Gmail
+smart-tourism-n8n/
+│
+├── workflows/
+│   └── Smart-Tourism-Travel-Registration-PUBLIC.json
+│
+├── screenshots/
+│   ├── n8n-workflow.png
+│   ├── google-sheets.png
+│   ├── google-calendar.png
+│   ├── personalized-itinerary.png
+│   └── confirmation-email.png
+│
+├── docs/
+│   └── project-report.pdf
+│
+└── README.md
