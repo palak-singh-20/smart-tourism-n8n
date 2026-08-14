@@ -148,16 +148,11 @@ The system generates:
 - Personalized Gmail
 
 ---
-
 ## 📸 Screenshots
 
 ### Complete n8n Workflow
 
 ![n8n Workflow](screenshots/n8n-workflow.png)
-
-### Google Sheets Output
-
-![Google Sheets](screenshots/google-sheets.png)
 
 ### Google Calendar
 
