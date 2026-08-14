@@ -161,25 +161,29 @@ The system generates:
 
 ## 📸 Screenshots
 
-### Complete n8n Workflow
+### 🔄 Complete n8n Workflow
 
-![n8n Workflow](n8n-workflow.png)
+![Complete n8n Workflow](screenshots/n8n-workflow.png)
 
-### Google Calender Itinerary
+### 📊 Google Sheets Output
 
-![Google calender](google-calender-it.png)
+![Google Sheets Output](screenshots/google-sheets.png)
 
-### Google Calendar
+### 📅 Google Calendar
 
-![Google Calendar](google-calendar.png)
+![Google Calendar](screenshots/google-calendar.png)
 
-### Personalized Itinerary
+### 🗓️ Google Calendar Itinerary
 
-![Personalized Itinerary](personalized-itinerary.png)
+![Google Calendar Itinerary](screenshots/google-calendar-it.png)
 
-### Gmail Output
+### 🧳 Personalized Itinerary
 
-![Gmail Output](confirmation-email.png)
+![Personalized Itinerary](screenshots/personalized-itinerary.png)
+
+### 📧 Gmail Output
+
+![Gmail Output](screenshots/confirmation-email.png)
 
 ---
 
