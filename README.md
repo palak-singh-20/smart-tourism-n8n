@@ -189,7 +189,7 @@ Automatically creates a Google Calendar event containing the customer's planned 
 
 Displays the scheduled travel itinerary and important trip activities directly in Google Calendar.
 
-![Google Calendar Itinerary](google-calendar-it.png)
+![Google Calendar Itinerary](google-calendar-it1.png)
 
 ---
 
