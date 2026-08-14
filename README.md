@@ -167,6 +167,8 @@ The registration form collects essential customer travel preferences, including 
 
 ![Travel Registration Form](form.png)
 
+---
+
 ### 🔄 Complete n8n Workflow
 
 The complete automation workflow showing the flow from customer registration to AI processing, API integrations, itinerary generation, and final communication.
@@ -204,7 +206,6 @@ Shows the AI-generated personalized travel plan based on the customer's destinat
 The final personalized travel plan is automatically delivered to the customer through Gmail, including itinerary details, weather information, travel tips, and recommendations.
 
 ![Gmail Output](confirmation-email.png)
-
 ---
 # 🎓 Capstone Highlights
 
