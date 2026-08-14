@@ -172,25 +172,6 @@ The system generates:
 
 ---
 
-## 🎥 Project Demo
-
-### Smart Tourism Automation Demo
-
-[▶️ Watch the Demo Video](YOUR_VIDEO_LINK_HERE)
-
-The demo covers:
-
-1. Customer registration
-2. AI destination recommendation
-3. Geocoding and weather APIs
-4. Personalized itinerary generation
-5. Google Calendar automation
-6. Google Sheets storage
-7. Gmail notification
-8. Premium recommendations
-
----
-
 ## 📁 Repository Structure
 
 ```text
