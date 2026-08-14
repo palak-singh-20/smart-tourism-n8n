@@ -1,0 +1,1484 @@
+{
+  "name": "Smart Tourism Travel Registration",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Smart Tourism Travel Registration",
+        "formDescription": "Enter your travel preferences to receive personalized destination recommendations and travel planning assistance.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Full Name"
+            },
+            {
+              "fieldLabel": "Email",
+              "fieldType": "email"
+            },
+            {
+              "fieldLabel": "Phone Number"
+            },
+            {
+              "fieldLabel": "Travel Date",
+              "fieldType": "date"
+            },
+            {
+              "fieldLabel": "Number of Travelers",
+              "fieldType": "number"
+            },
+            {
+              "fieldLabel": "Estimated Budget (₹)",
+              "fieldType": "number"
+            },
+            {
+              "fieldLabel": "Trip Duration (Days)",
+              "fieldType": "number"
+            },
+            {
+              "fieldLabel": "Travel Interests"
+            },
+            {
+              "fieldLabel": "Accommodation Preference",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Budget"
+                  },
+                  {
+                    "option": "3 Star"
+                  },
+                  {
+                    "option": "4 Star"
+                  },
+                  {
+                    "option": "5 Star"
+                  },
+                  {
+                    "option": "Luxury"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Transportation Preference",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Flight"
+                  },
+                  {
+                    "option": "Train"
+                  },
+                  {
+                    "option": "Bus"
+                  },
+                  {
+                    "option": "Car"
+                  },
+                  {
+                    "option": "Mixed"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        624,
+        -1072
+      ],
+      "id": "526e7507-8f82-46d5-9b61-d9db0673702e",
+      "name": "On form submission",
+      "webhookId": "6dfffada-5b99-4df6-ab48-1b0febb1575e"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1N9V5bop_OddDlWnUlo3d_4VoF-UzdjqnP1r78bPZmxA/edit?gid=0#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1N9V5bop_OddDlWnUlo3d_4VoF-UzdjqnP1r78bPZmxA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Full Name": "={{ $json['Full Name'] }}",
+            "Email": "={{ $json.Email }}",
+            "Phone Number": "={{ $json['Phone Number'] }}",
+            "Travel Date": "={{ $json['Travel Date'] }}",
+            "Number of Travelers": "={{ $json['Number of Travelers'] }}",
+            "Estimated Budget (₹)": "={{ $json['Estimated Budget (₹)'] }}",
+            "Trip Duration (Days)": "={{ $json['Trip Duration (Days)'] }}",
+            "Travel Interests": "={{ $json['Travel Interests'] }}",
+            "Accommodation Preference": "={{ $json['Accommodation Preference'] }}",
+            "Transportation Preference": "={{ $json['Transportation Preference'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Phone Number",
+              "displayName": "Phone Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Travel Date",
+              "displayName": "Travel Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Number of Travelers",
+              "displayName": "Number of Travelers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Estimated Budget (₹)",
+              "displayName": "Estimated Budget (₹)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Trip Duration (Days)",
+              "displayName": "Trip Duration (Days)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Travel Interests",
+              "displayName": "Travel Interests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Accommodation Preference",
+              "displayName": "Accommodation Preference",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Transportation Preference",
+              "displayName": "Transportation Preference",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        800,
+        -1072
+      ],
+      "id": "7a2c619b-fec8-48c5-a0a9-ea6fa8b9e7d8",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4HFRVWXNUqubtN5p",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6f80e95c-c586-4304-b690-92a9a5d51c5a",
+              "name": "customer_name",
+              "value": "={{ $('On form submission').item.json['Full Name'] }}",
+              "type": "string"
+            },
+            {
+              "id": "0966ae6c-3407-4060-80f4-ee32c555d0f3",
+              "name": "customer_email",
+              "value": "={{ $('On form submission').item.json['Email'] }}",
+              "type": "string"
+            },
+            {
+              "id": "a1b1f7f4-ea82-45e4-8268-4d96a9e7c796",
+              "name": "budget",
+              "value": "={{ $('On form submission').item.json['Estimated Budget (₹)'] }}",
+              "type": "number"
+            },
+            {
+              "id": "1a755c85-30ca-49fd-bd89-ef8da0ad1200",
+              "name": "travel_duration",
+              "value": "={{ $('On form submission').item.json['Trip Duration (Days)'] }}",
+              "type": "number"
+            },
+            {
+              "id": "9f105900-c358-4db3-abec-d3e04773ac5f",
+              "name": "travelers",
+              "value": "={{ $('On form submission').item.json['Number of Travelers'] }}",
+              "type": "number"
+            },
+            {
+              "id": "63d3b29a-5b92-456b-b1e6-62e4b59c6b07",
+              "name": "interests",
+              "value": "={{ $('On form submission').item.json['Travel Interests'] }}",
+              "type": "string"
+            },
+            {
+              "id": "0f16585a-3495-4861-9005-53f2b200cd9e",
+              "name": "accommodation",
+              "value": "={{ $('On form submission').item.json['Accommodation Preference'] }}",
+              "type": "string"
+            },
+            {
+              "id": "f159bc87-7c29-4ef1-9635-fd99279c5c08",
+              "name": "transportation",
+              "value": "={{ $('On form submission').item.json['Transportation Preference'] }}",
+              "type": "string"
+            },
+            {
+              "id": "6d509e2a-2e1e-4ec3-99f4-0b2d897931be",
+              "name": "travel_date",
+              "value": "={{ $('On form submission').item.json['Travel Date'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        992,
+        -1072
+      ],
+      "id": "451a6806-8c63-48df-9590-d33255e2e802",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "0a419467-9381-4a71-be71-3ba9c47dc653",
+              "leftValue": "={{ $json.budget }}",
+              "rightValue": 5000,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1168,
+        -1072
+      ],
+      "id": "0866c555-6148-42a0-a525-b68c82323a52",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "47ad8a1e-fbd0-4c25-a84f-923a0eaebdda",
+              "leftValue": "={{ $json.travel_date }}",
+              "rightValue": "={{ $now }}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1392,
+        -1088
+      ],
+      "id": "11758caf-000d-42ed-a13c-7f8f654307ce",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer YOUR_GROQ_API_KEY"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are an expert travel planner. You help travelers choose destinations based on their budget, interests, group size, trip duration, accommodation, transportation, and travel date.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Traveler details:\\nBudget: ₹{{ $json.budget }}\\nNumber of travelers: {{ $json.travelers }}\\nTrip duration: {{ $json.travel_duration }} days\\nTravel interests: {{ $json.interests }}\\nAccommodation preference: {{ $json.accommodation }}\\nTransportation preference: {{ $json.transportation }}\\nTravel date: {{ $json.travel_date }}\\n\\nRecommend exactly 3 suitable destinations. For each destination provide:\\n1. Destination name\\n2. Estimated total trip cost\\n3. Why it matches the traveler\\n4. Three recommended activities\\n\\nKeep all recommendations realistic and within the customer's budget.\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1648,
+        -1104
+      ],
+      "id": "b754324a-b95a-469a-b298-6f66b86cbf65",
+      "name": "Groq — Destination Recommendation"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3b6bfa7b-1a3a-4037-8ce7-203a48a24a74",
+              "name": "destination_recommendation",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "170fc932-87dd-412d-ad21-33af288593f1",
+              "name": "customer_name",
+              "value": "={{ $('If1').item.json.customer_name }}",
+              "type": "string"
+            },
+            {
+              "id": "aaca95a7-d189-4f54-8d74-67993802a7d2",
+              "name": "budget",
+              "value": "={{ $('If1').item.json.budget }}",
+              "type": "number"
+            },
+            {
+              "id": "ce98fda2-5bfa-4a3a-a0be-1bffbf17f397",
+              "name": "travel_date",
+              "value": "={{ $('If1').item.json.travel_date }}",
+              "type": "string"
+            },
+            {
+              "id": "d8743a99-fb18-4724-9448-359cf22a8790",
+              "name": "travel_duration",
+              "value": "={{ $('If1').item.json.travel_duration }}",
+              "type": "string"
+            },
+            {
+              "id": "520d3528-a690-484d-aa56-ecc2f8a71b31",
+              "name": "travelers",
+              "value": "={{ $('If1').item.json.travelers }}",
+              "type": "string"
+            },
+            {
+              "id": "1650b136-1285-46db-810d-eeb276fa7a02",
+              "name": "interests",
+              "value": "={{ $('If1').item.json.interests }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        1824,
+        -1104
+      ],
+      "id": "4ef42771-7bd6-44b1-aa85-db84cc29a122",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const text = $json.destination_recommendation || '';\n\nconst match = text.match(/Destination\\s*1\\s*:\\s*([^\\n]+)/i);\n\nconst destination = match\n  ? match[1].replace(/\\*\\*/g, '').trim()\n  : 'Goa';\n\nreturn [\n  {\n    json: {\n      ...$json,\n      recommended_destination: destination\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        -1104
+      ],
+      "id": "be4915c2-1c4c-49e7-a924-8532bc3300c9",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "url": "https://geocoding-api.open-meteo.com/v1/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $json.recommended_destination }}"
+            },
+            {
+              "name": "count",
+              "value": "1"
+            },
+            {
+              "name": "language",
+              "value": "en"
+            },
+            {
+              "name": "format",
+              "value": "json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        2176,
+        -1104
+      ],
+      "id": "2677e7a6-c474-4130-a828-d6d024750a67",
+      "name": "Geocoding"
+    },
+    {
+      "parameters": {
+        "url": "https://api.open-meteo.com/v1/forecast",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "latitude",
+              "value": "={{ $json.results[0].latitude }}"
+            },
+            {
+              "name": "longitude",
+              "value": "={{ $json.results[0].longitude }}"
+            },
+            {
+              "name": "daily",
+              "value": "weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max"
+            },
+            {
+              "name": "timezone",
+              "value": "auto"
+            },
+            {
+              "name": "forecast_days",
+              "value": "7"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        2352,
+        -1104
+      ],
+      "id": "fb90dcdc-86ba-41d6-b1af-271aeb0a752c",
+      "name": "Weather API"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer YOUR_GROQ_API_KEY"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a professional travel itinerary planner. Create practical, realistic and personalized travel itineraries. Respect the customer's budget, interests, travel duration, accommodation preference and transportation preference.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Create a personalized travel itinerary using these details:\\n\\nCustomer: {{ $json.customer_name }}\\nDestination: {{ $json.destination }}\\nTravel date: {{ $json.travel_date }}\\nTrip duration: {{ $json.travel_duration }} days\\nNumber of travelers: {{ $json.travelers }}\\nBudget: ₹{{ $json.budget }}\\nInterests: {{ $json.interests }}\\nTemperature forecast: {{ $json.temperature_min }}°C - {{ $json.temperature_max }}°C\\nRain probability: {{ $json.rain_probability }}%\\n\\nCreate a day-by-day itinerary for the entire trip.\\n\\nFor every day include:\\n- Morning activity\\n- Afternoon activity\\n- Evening activity\\n- Suggested food experience\\n- Approximate daily cost\\n\\nAlso provide:\\n1. Estimated total trip cost\\n2. Budget remaining\\n3. Travel tips\\n4. Weather precautions\\n5. Packing suggestions\\n\\nKeep the itinerary realistic and within the customer's budget.\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        864,
+        -752
+      ],
+      "id": "20ecbc04-8927-408b-9f48-fdaa8bc306dd",
+      "name": "Groq Personalized Itinerary Generator"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68ccee07-a097-4adf-8538-d06df833ebe8",
+              "name": "customer_name",
+              "value": "={{ $('Travel Data + Weather').item.json.customer_name }}",
+              "type": "string"
+            },
+            {
+              "id": "1d013a99-8223-4d8d-a97a-9e7668a8d8ed",
+              "name": "customer_email",
+              "value": "={{ $('Travel Data + Weather').item.json.customer_email }}",
+              "type": "string"
+            },
+            {
+              "id": "c2c2d1ea-fe5e-4d75-99c9-2ade484240b6",
+              "name": "destination",
+              "value": "={{ $('Travel Data + Weather').item.json.destination }}",
+              "type": "string"
+            },
+            {
+              "id": "0217f35d-1562-4135-8fa1-373566bb4e69",
+              "name": "travel_date",
+              "value": "={{ $('Travel Data + Weather').item.json.travel_date }}",
+              "type": "string"
+            },
+            {
+              "id": "05487d93-4191-49ba-adaa-30cd8a067663",
+              "name": "itinerary",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "0919a015-a3fb-4b50-a567-b1c8e45d526c",
+              "name": "budget",
+              "value": "={{ $('Travel Data + Weather').item.json.budget }}",
+              "type": "number"
+            },
+            {
+              "id": "b9df7800-252c-4a13-9f8d-f9af9fe6873a",
+              "name": "travelers",
+              "value": "={{ $('Travel Data + Weather').item.json.travelers }}",
+              "type": "number"
+            },
+            {
+              "id": "21579102-b9a9-4bfd-b10f-c50c31c89bc8",
+              "name": "travel_duration",
+              "value": "={{ $('Travel Data + Weather').item.json.travel_duration }}",
+              "type": "number"
+            },
+            {
+              "id": "f40d1700-0012-4a2b-90b5-071e750c5062",
+              "name": "interests",
+              "value": "={{ $('Travel Data + Weather').item.json.interests }}",
+              "type": "string"
+            },
+            {
+              "id": "3c91192c-a69e-43a4-b0db-07a3cb02b078",
+              "name": "temperature_max",
+              "value": "={{ $('Travel Data + Weather').item.json.temperature_max }}",
+              "type": "number"
+            },
+            {
+              "id": "56ec32a7-cea4-4fe5-b44d-07b1af660ad2",
+              "name": "temperature_min",
+              "value": "={{ $('Travel Data + Weather').item.json.temperature_min }}",
+              "type": "number"
+            },
+            {
+              "id": "60751ce3-0653-4f11-8e7b-70c40631d6c3",
+              "name": "rain_probability",
+              "value": "={{ $('Travel Data + Weather').item.json.rain_probability }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        1024,
+        -752
+      ],
+      "id": "96d0449d-f4bc-4b2c-b4d2-b6c8418487eb",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b26e0271-99c8-4307-939b-e8c6cf77a256",
+              "name": "customer_name",
+              "value": "={{ $('If1').item.json.customer_name }}",
+              "type": "string"
+            },
+            {
+              "id": "0c8c571d-d4cc-435d-aeab-fb9992cae3c3",
+              "name": "customer_email",
+              "value": "={{ $('If1').item.json.customer_email }}",
+              "type": "string"
+            },
+            {
+              "id": "0438b888-d5d0-4758-a28d-3646b08a995d",
+              "name": "destination",
+              "value": "={{ $('Code in JavaScript').item.json.recommended_destination }}",
+              "type": "string"
+            },
+            {
+              "id": "31ef6053-e3de-4abf-a28b-1afda176b98b",
+              "name": "budget",
+              "value": "={{ $('If1').item.json.budget }}",
+              "type": "number"
+            },
+            {
+              "id": "e3ca702d-01fd-40c3-9a61-a271b57e71a0",
+              "name": "travelers",
+              "value": "={{ $('If1').item.json.travelers }}",
+              "type": "number"
+            },
+            {
+              "id": "f6014712-651f-4ae3-9bd0-03b8c171c19a",
+              "name": "travel_duration",
+              "value": "={{ $('If1').item.json.travel_duration }}",
+              "type": "string"
+            },
+            {
+              "id": "840304dc-c258-4a65-9ab0-aba4a9fc20d0",
+              "name": "interests",
+              "value": "={{ $('If1').item.json.interests }}",
+              "type": "string"
+            },
+            {
+              "id": "882e82a9-3de5-4adb-82a8-0b3c92ba797e",
+              "name": "travel_date",
+              "value": "={{ $('If1').item.json.travel_date }}",
+              "type": "string"
+            },
+            {
+              "id": "cce4214c-c9f6-4656-a364-5278950bc054",
+              "name": "temperature_max",
+              "value": "={{ $json.daily.temperature_2m_max[0] }}",
+              "type": "number"
+            },
+            {
+              "id": "820f3a5e-8464-4879-bb86-5ede893fd049",
+              "name": "temperature_min",
+              "value": "={{ $json.daily.temperature_2m_min[0] }}",
+              "type": "number"
+            },
+            {
+              "id": "7f87115e-875a-48da-8fb8-299eb5c7fb7c",
+              "name": "rain_probability",
+              "value": "={{ $json.daily.precipitation_probability_max[0] }}",
+              "type": "number"
+            },
+            {
+              "id": "cc7f6320-e438-4bf5-b4c1-9ff9e4dbda27",
+              "name": "weather_code",
+              "value": "={{ $json.daily.weather_code[0] }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        2528,
+        -1104
+      ],
+      "id": "7ba7d9cf-810a-4b4f-b422-03df8b814f2a",
+      "name": "Travel Data + Weather"
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "palaksinghps20@gmail.com",
+          "mode": "list",
+          "cachedResultName": "palaksinghps20@gmail.com"
+        },
+        "start": "={{ $json.travel_date + 'T09:00:00' }}",
+        "end": "={{ DateTime.fromISO($json.travel_date).plus({days: Number($json.travel_duration)}).toFormat(\"yyyy-MM-dd'T'20:00:00\") }}",
+        "additionalFields": {
+          "description": "={{  'Destination: ' + $json.destination + '\\nTravelers: ' + $json.travelers + '\\nBudget: ₹' + $json.budget + '\\nInterests: ' + $json.interests + '\\nAccommodation: ' + $json.accommodation + '\\nTransportation: ' + $json.transportation + '\\n\\nPERSONALIZED ITINERARY\\n\\n' + $json.itinerary }}",
+          "summary": "=✈️ {{ $json.destination }} Trip — {{ $json.customer_name }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        1200,
+        -752
+      ],
+      "id": "d8825bb4-001a-4441-aa1d-43549c767c90",
+      "name": "Create an event",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "i37bD0hd9hoyeew5",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Edit Fields3').item.json.customer_email }}",
+        "subject": "=✈️ Your Personalized Travel Plan — {{ $('Edit Fields3').item.json.destination }}",
+        "message": "=<h2>✈️ Your Personalized Travel Plan</h2>  <p>Hello <strong>{{ $('Edit Fields3').item.json.customer_name }}</strong>,</p>  <p>Your personalized travel plan has been successfully prepared!</p>  <h3>🌍 Trip Details</h3>  <ul> <li><strong>Destination:</strong> {{ $('Edit Fields3').item.json.destination }}</li> <li><strong>Travel Date:</strong> {{ $('Edit Fields3').item.json.travel_date }}</li> <li><strong>Travelers:</strong> {{ $('Edit Fields3').item.json.travelers }}</li> <li><strong>Budget:</strong> ₹{{ $('Edit Fields3').item.json.budget }}</li> <li><strong>Accommodation:</strong> {{ $('Edit Fields3').item.json.accommodation }}</li> <li><strong>Transportation:</strong> {{ $('Edit Fields3').item.json.transportation }}</li> </ul>  <hr>  <h3>🗺️ Your Personalized Itinerary</h3>  <p>{{ $('Edit Fields3').item.json.itinerary }}</p>  <hr>  <p>📅 Your trip has also been added to your Google Calendar.</p>  <p>Have a wonderful journey! ✈️🌍</p>  <p><strong>Smart Tourism Travel Planner</strong></p>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1360,
+        -752
+      ],
+      "id": "825525cb-7638-4040-a7f0-db0569e2185e",
+      "name": "Send a message",
+      "webhookId": "b0778d2f-3b59-4009-bb03-c9e7709e081f",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "wD7uvJnXoFv1SQtv",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "5a815657-db31-48c7-8c4c-87da63d44cde",
+              "leftValue": "={{ $('Edit Fields3').item.json.budget }}",
+              "rightValue": 30000,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1568,
+        -752
+      ],
+      "id": "197e9fe2-8666-4788-af91-e7f94ac082d8",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "YOUR_GROQ_API_KEY"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a premium travel concierge. Suggest luxury upgrades and exclusive experiences while respecting the traveler's budget.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Create premium travel suggestions for {{ $('Edit Fields3').item.json.customer_name }} traveling to {{ $('Edit Fields3').item.json.destination }}. Budget: ₹{{ $('Edit Fields3').item.json.budget }}. Travelers: {{ $('Edit Fields3').item.json.travelers }}. Interests: {{ $('Edit Fields3').item.json.interests }}. Accommodation: {{ $('Edit Fields3').item.json.accommodation }}. Transportation: {{ $('Edit Fields3').item.json.transportation }}. Give 3 luxury upgrades, 3 exclusive experiences, and estimated additional costs.\"\n    }\n  ],\n  \"temperature\": 0.7\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1856,
+        -816
+      ],
+      "id": "fca74f88-f230-467d-8974-ec50441275ab",
+      "name": "Groq — Premium Concierge"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        2080,
+        -752
+      ],
+      "id": "a7a0b68a-b9e4-41cd-abae-50b0c53143c0",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dd1d9e47-d4bd-4416-9220-ec57d9458618",
+              "name": "customer_name",
+              "value": "={{ $('Edit Fields3').item.json.customer_name }}",
+              "type": "string"
+            },
+            {
+              "id": "d750d485-71b2-49ca-9e43-e64001a1198f",
+              "name": "customer_email",
+              "value": "={{ $('Edit Fields3').item.json.customer_email }}",
+              "type": "string"
+            },
+            {
+              "id": "d1374bb0-9254-4246-91e4-899e36a0fa3d",
+              "name": "destination",
+              "value": "={{ $('Edit Fields3').item.json.destination }}",
+              "type": "string"
+            },
+            {
+              "id": "0608d481-1b91-49e0-8c96-5fc4c0135886",
+              "name": "travel_date",
+              "value": "={{ $('Edit Fields3').item.json.travel_date }}",
+              "type": "string"
+            },
+            {
+              "id": "eb6ea1ba-5b1e-4ba2-aa38-ad0398b84fe9",
+              "name": "travelers",
+              "value": "={{ $('Edit Fields3').item.json.travelers }}",
+              "type": "number"
+            },
+            {
+              "id": "65ce3d56-104e-429c-aae1-37a302508339",
+              "name": "budget",
+              "value": "={{ $('Edit Fields3').item.json.budget }}",
+              "type": "number"
+            },
+            {
+              "id": "7497f6ed-72e2-4606-949a-708d01f09e89",
+              "name": "travel_duration",
+              "value": "={{ $('Edit Fields3').item.json.travel_duration }}",
+              "type": "number"
+            },
+            {
+              "id": "7efb937f-0183-40f8-97bb-2b4882cea566",
+              "name": "interests",
+              "value": "={{ $('Edit Fields3').item.json.interests }}",
+              "type": "string"
+            },
+            {
+              "id": "974c4497-18c7-4e0e-9bfd-664e6dfed166",
+              "name": "accommodation",
+              "value": "={{ $('Edit Fields').item.json.accommodation }}",
+              "type": "string"
+            },
+            {
+              "id": "e4eb544a-629b-4023-88de-5035317cafa6",
+              "name": "transportation",
+              "value": "={{ $('Edit Fields').item.json.transportation }}",
+              "type": "string"
+            },
+            {
+              "id": "e5ee5f17-c525-4861-b95a-c36db125089f",
+              "name": "itinerary",
+              "value": "={{ $('Groq Personalized Itinerary Generator').item.json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "3c75dcad-872c-45ab-9447-bb4ad3730ca7",
+              "name": "premium_recommendations",
+              "value": "={{ $('Groq — Premium Concierge').item.json.choices[0].message.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        2240,
+        -752
+      ],
+      "id": "f72e7e2e-2310-43e6-ba1a-95719ad887f5",
+      "name": "Final Travel Record"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1N9V5bop_OddDlWnUlo3d_4VoF-UzdjqnP1r78bPZmxA",
+          "mode": "list",
+          "cachedResultName": "Smart Tourism Customers",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1N9V5bop_OddDlWnUlo3d_4VoF-UzdjqnP1r78bPZmxA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1N9V5bop_OddDlWnUlo3d_4VoF-UzdjqnP1r78bPZmxA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Destination": "={{ $('Final Travel Record').item.json.destination }}",
+            "Itinerary": "={{ $('Final Travel Record').item.json.itinerary }}",
+            "Premium Recommendations": "={{ $('Final Travel Record').item.json.premium_recommendations }}",
+            "Email": "={{ $('Final Travel Record').item.json.customer_email }}"
+          },
+          "matchingColumns": [
+            "Email"
+          ],
+          "schema": [
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Phone Number",
+              "displayName": "Phone Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Travel Date",
+              "displayName": "Travel Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Number of Travelers",
+              "displayName": "Number of Travelers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Estimated Budget (₹)",
+              "displayName": "Estimated Budget (₹)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Trip Duration (Days)",
+              "displayName": "Trip Duration (Days)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Travel Interests",
+              "displayName": "Travel Interests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Accommodation Preference",
+              "displayName": "Accommodation Preference",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Transportation Preference",
+              "displayName": "Transportation Preference",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Destination",
+              "displayName": "Destination",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Itinerary",
+              "displayName": "Itinerary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Premium Recommendations",
+              "displayName": "Premium Recommendations",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        2416,
+        -752
+      ],
+      "id": "29d9f696-2427-49ce-bac5-9f9d995c8ca2",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4HFRVWXNUqubtN5p",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Final Travel Record').item.json.customer_email }}",
+        "subject": "🌍 Your Smart Tourism Plan Is Ready!",
+        "message": "=<h2>✈️ Your Trip Plan Is Ready!</h2>  <p>Hello {{ $('Final Travel Record').item.json.customer_name }},</p>  <p>Your personalized travel plan for <strong>{{ $('Final Travel Record').item.json.destination }}</strong> is ready.</p>  <p>Your details and recommendations have been saved successfully.</p>  <p>Have a wonderful trip! 🌍✈️</p>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        2592,
+        -752
+      ],
+      "id": "2609d140-c6a9-49da-be63-5e39b6cc0951",
+      "name": "Send a message1",
+      "webhookId": "1a26de50-374c-4425-9d97-17e4a75987cc",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "wD7uvJnXoFv1SQtv",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Collect travel details through the registration form:\n• Personal information\n• Travel date & duration\n• Number of travelers\n• Budget\n• Interests\n• Accommodation & transportation preferences",
+        "height": 192,
+        "width": 480
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        960,
+        -1408
+      ],
+      "typeVersion": 1,
+      "id": "94806ece-924b-428d-9916-bc27268772ec",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "Groq analyzes the customer's preferences, budget and trip duration to recommend the most suitable destination."
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1984,
+        -1328
+      ],
+      "typeVersion": 1,
+      "id": "fd9819a8-dd5e-4df7-a350-0e4c0d078efc",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "Geocoding identifies the destination location, while the Weather API provides current travel conditions for smarter planning."
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2256,
+        -1328
+      ],
+      "typeVersion": 1,
+      "id": "7ecc4dbd-58b1-474d-9d21-aa4ab5445a0e",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "Groq combines customer preferences, destination and weather data to generate a personalized itinerary and premium recommendations."
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1616,
+        -496
+      ],
+      "typeVersion": 1,
+      "id": "d6f4cfa8-6da1-434e-ba9c-1e300cbfe912",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "The workflow automatically:\n• Saves the final plan to Google Sheets\n• Creates a Google Calendar event\n• Sends the personalized plan via Gmail"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1904,
+        -496
+      ],
+      "typeVersion": 1,
+      "id": "b124ba0a-5a80-436e-952f-e03d75971af9",
+      "name": "Sticky Note4"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Groq — Destination Recommendation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq — Destination Recommendation": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Geocoding",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Geocoding": {
+      "main": [
+        [
+          {
+            "node": "Weather API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Weather API": {
+      "main": [
+        [
+          {
+            "node": "Travel Data + Weather",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Personalized Itinerary Generator": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Travel Data + Weather": {
+      "main": [
+        [
+          {
+            "node": "Groq Personalized Itinerary Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Create an event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create an event": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Groq — Premium Concierge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Groq — Premium Concierge": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Final Travel Record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final Travel Record": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "e745a326-ec4f-4566-a3a3-17895e8c3b78",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3ae1af204bdb11a1e7cd0bf4ee4c630db121c19cdaf441bf41fae8c7270ec683"
+  },
+  "nodeGroups": [],
+  "id": "i9YSycZvstUqkbos",
+  "tags": []
+}
