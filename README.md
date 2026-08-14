@@ -182,6 +182,27 @@ The system generates:
 ![Gmail Output](confirmation-email.png)
 
 ---
+# 🎓 Capstone Highlights
+
+This project demonstrates practical implementation of:
+
+- 🤖 **AI-powered decision making**
+- 🔄 **End-to-end workflow automation**
+- 🔗 **REST API integration**
+- 🌍 **Location-based travel services**
+- 🌦️ **Weather-aware travel planning**
+- 🧠 **AI-generated destination recommendations**
+- 🗓️ **Personalized itinerary generation**
+- 🔀 **Conditional workflow branching**
+- 💻 **JavaScript data processing**
+- 📊 **Automated Google Sheets data storage**
+- 📅 **Google Calendar automation**
+- 📧 **Automated Gmail communication**
+- 💎 **AI-powered premium recommendations**
+- 🔐 **Secure credential management**
+- 🚀 **Complete business process automation**
+- 🔗 **Integration of multiple external services**
+- 📈 **Centralized travel record management**
 
 ---
 
