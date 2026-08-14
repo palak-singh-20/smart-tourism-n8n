@@ -158,6 +158,10 @@ The system generates:
 
 ![Google Calendar](google-calendar.png)
 
+### Google Calendar
+
+![Google Calendar](google-calendar-it.png)
+
 ### Personalized Itinerary
 
 ![Personalized Itinerary](personalized-itinerary.png)
